@@ -56,7 +56,8 @@ http://ismb-npp-java.googlecode.com/files/GooglePlusAuth.jpg
 *4* - On the Android phone, choose Google+ and the following  window it will appear
 http://ismb-npp-java.googlecode.com/files/NDEFMsgReceived.jpg
 
-*THAT'S ALL* Here you have received the NDEF message containing  _NPP test communication between NEXUS-S and ACR122_
+ http://ismb-npp-java.googlecode.com/files/50px-Done.png *THAT'S ALL* 
+Here you have received the NDEF message containing  _NPP test communication between NEXUS-S and ACR122_
 
 *5* - This is the log on the Android LogCat Console:
 {{{
