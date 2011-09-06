@@ -1,4 +1,4 @@
-#summary From Phone To ACR-122.
+#summary From ACR-122 to Phone.
 
 = Introduction =
 
