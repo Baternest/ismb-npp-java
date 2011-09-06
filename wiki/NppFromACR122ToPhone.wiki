@@ -50,3 +50,7 @@ Called rightProcedureTarget..
 [DEBUG] {receiving [5 bytes]} 0xD5 0x8F 0x00 0x90 0x00 
 Finished
 }}}
+
+http://ismb-npp-java.googlecode.com/files/GooglePlusAuth.jpg
+
+4 - On the Android phone, choose Google+ and the following  window it will appear
