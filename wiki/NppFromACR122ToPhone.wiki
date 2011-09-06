@@ -1,0 +1,12 @@
+#summary From Phone To ACR-122.
+
+= Introduction =
+
+Test Environment and Log for testing NPP (NDEF PUSH PROTOCOL) communication from ACR122 to PHONE Samsung Nexus S
+
+
+= Details =
+
+Test Environment: 
+
+http://ismb-npp-java.googlecode.com/files/TestEnvironment.jpg
