@@ -92,5 +92,3 @@ Here you have received the NDEF message containing  _NPP test communication betw
 
 
 *Please consider this first release of the application as a Proof of Concept and not as a fully defined and bug free application.  Obviously, it's not yet STABLE.*
-
-If anyone is interested in contributing to build a stable library please contact me at il.barriera@gmail.com
