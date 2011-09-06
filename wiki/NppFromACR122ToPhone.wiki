@@ -10,3 +10,22 @@ Test Environment and Log for testing NPP (NDEF PUSH PROTOCOL) communication from
 Test Environment: 
 
 http://ismb-npp-java.googlecode.com/files/TestEnvironment.jpg
+
+In the first test on the Android phone, it has been used the Google+ App to receive data sent from ACR122
+(for details http://www.google.com/mobile/+/ )
+
+So if you want to test the Java code, verify to have such application installed on your NFC capable phone.
+ASAP it will be uploaded a simple Android code in order to receive NDEF message without Google plus.
+
+1 - The first step is to execute the Java code and then wait until in the console appears the following messages:
+
+{{{
+Get factory
+Get terminals
+Terminal name: ACS ACR122U 00 00
+T=0
+Called rightProcedureTarget..
+[DEBUG] {sending   [50 bytes]} 0xFF 0x00 0x00 0x00 0x2D 0xD4 0x8C 0x01 0x00 0x00 0x00 0x00 0x00 0x40 0x01 0xFE 0x0F 0xBB 0xBA 0xA6 0xC9 0x89 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0xFF 0xFF 0x01 0xFE 0x0F 0xBB 0xBA 0xA6 0xC9 0x89 0x00 0x00 0x06 0x46 0x66 0x6D 0x01 0x01 0x10 0x00 
+}}}
+
+2- The second step is to put the phone on the reader
