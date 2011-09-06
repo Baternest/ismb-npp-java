@@ -18,7 +18,7 @@ In the first test on the Android phone, it has been used the Google+ App to rece
 So if you want to test the Java code, verify to have such application installed on your NFC capable phone.
 ASAP it will be uploaded a simple Android code in order to receive NDEF message without Google plus.
 
-*1* - The first step is to execute the Java code (*SenderToPhone.java* contained in the *sender.rar*) and then wait until in the console appears the following messages:
+*1* - The first step is to execute the Java code (*SenderToPhone.java* contained in the archive: http://ismb-npp-java.googlecode.com/files/NppFromReaderToPhone.zip) and then wait until in the console appears the following messages:
 
 {{{
 Get factory
