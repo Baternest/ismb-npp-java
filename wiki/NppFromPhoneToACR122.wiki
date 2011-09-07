@@ -65,3 +65,5 @@ Here you have received on your Java Application the NDEF message containing  _ND
 [2011-09-07 10:49:07 - SimpleNDEFPusher] Starting activity it.ismb.android.npp.SimpleNDEFPusher on device 3232AA96F58300EC
 [2011-09-07 10:49:07 - SimpleNDEFPusher] ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=it.ismb.android.npp/.SimpleNDEFPusher }
 }}}
+
+*Please consider this first release of the application as a Proof of Concept and not as a fully defined and bug free application.  Obviously, it's not yet STABLE.*
