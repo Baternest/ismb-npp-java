@@ -18,7 +18,7 @@ In the first test on the Android phone, it has been used the *SimpleNDEFPusher* 
 So if you want to test the Java code, you need to install such application on your NFC capable phone and execute it. If you don't want to build your own application also the installer is available in Downloads section.
 
 
-*1* - The first step is to execute the Java code (*PhoneToReceiver* contained in the archive: http://ismb-npp-java.googlecode.com/files/NPPFromPhoneToReader.zip) and then wait until in the console appears the following messages:
+*1* - The first step is to execute the Java code ( *PhoneToReceiver* contained in the archive: http://ismb-npp-java.googlecode.com/files/NPPFromPhoneToReader.zip) and then wait until in the console appears the following messages:
 
 {{{
 Get factory
