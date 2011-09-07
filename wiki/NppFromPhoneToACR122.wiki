@@ -13,7 +13,7 @@ Test Environment:
 
 http://ismb-npp-java.googlecode.com/files/TestEnv2.jpg
 
-In the first test on the Android phone, it has been used the *SimpleNDEFPusher* App (source code and installer available in Downloads section) to send data to an ACR122 reader
+In the first test on the Android phone, it has been used the *SimpleNDEFPusher* App (source code  - AndroidSimpleNDEFPusherSource.zip and installer AndroidSimpleNDEFPusherAPK.zip available in Downloads section) to send data to an ACR122 reader.
 
 So if you want to test the Java code, you need to install such application on your NFC capable phone and execute it. If you don't want to build your own application also the installer is available in Downloads section.
 
