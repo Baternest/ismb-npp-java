@@ -4,10 +4,6 @@
 
 Test Environment and Log obtained in testing NPP (NDEF PUSH PROTOCOL) communication from a PHONE Samsung Nexus S to ACR122 reader
 
-= Introduction =
-
-Add your content here.
-
 
 = Details =
 
