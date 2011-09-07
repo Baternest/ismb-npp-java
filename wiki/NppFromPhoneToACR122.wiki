@@ -10,9 +10,9 @@ Test Environment and Log obtained in testing NPP (NDEF PUSH PROTOCOL) communicat
 
 Test Environment: 
 
-http://ismb-npp-java.googlecode.com/files/TestEnvironment.jpg
+http://ismb-npp-java.googlecode.com/files/TestEnv2.jpg
 
-In the first test on the Android phone, it has been used the SimpleNDEFPusher App (source code and installer available in Downloads section) to send data to an ACR122 reader
+In the first test on the Android phone, it has been used the *SimpleNDEFPusher* App (source code and installer available in Downloads section) to send data to an ACR122 reader
 
 So if you want to test the Java code, you need to install such application on your NFC capable phone and execute it. If you don't want to build your own application also the installer is available in Downloads section.
 
@@ -27,3 +27,6 @@ T=0
 Called rightProcedureReceiver..
 [DEBUG] {sending   [50 bytes]} 0xFF 0x00 0x00 0x00 0x2D 0xD4 0x8C 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x01 0xFE 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x01 0xFE 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x06 0x46 0x66 0x6D 0x01 0x01 0x10 0x00 
 }}}
+
+*2* - The second step is to put the phone on the reader
+http://ismb-npp-java.googlecode.com/files/Putting2.jpg
