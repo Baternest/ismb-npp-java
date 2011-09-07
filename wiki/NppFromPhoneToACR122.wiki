@@ -1,4 +1,8 @@
-#summary One-sentence summary of this page.
+#summary NPP Communication from Phone to ACR-122.
+
+= Introduction =
+
+Test Environment and Log obtained in testing NPP (NDEF PUSH PROTOCOL) communication from a PHONE Samsung Nexus S to ACR122 reader
 
 = Introduction =
 
