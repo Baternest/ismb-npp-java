@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Settings in order to use javax.smartcard.* in j2se projects
+Settings in order to use javax.smartcard.* in a j2se project
 
 
 = Details =
@@ -13,3 +13,5 @@ Now go to Java -> Compiler -> Errors/Warnings -> Deprecated and restricted API
 
 
 and verify you are working with the following settings (shown in the attached picture)
+
+http://ismb-npp-java.googlecode.com/files/screenshot.png
