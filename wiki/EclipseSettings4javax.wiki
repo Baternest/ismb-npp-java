@@ -1,0 +1,15 @@
+#summary Settings in order to use javax.smartcard.* in j2se projects
+
+= Introduction =
+
+Settings in order to use javax.smartcard.* in j2se projects
+
+
+= Details =
+
+Open Eclipse and go to Eclipse/Preferences.
+
+Now go to Java -> Compiler -> Errors/Warnings -> Deprecated and restricted API
+
+
+and verify you are working with the following settings (shown in the attached picture)
