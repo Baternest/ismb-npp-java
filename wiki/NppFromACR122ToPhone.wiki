@@ -29,6 +29,19 @@ Called rightProcedureTarget..
 [DEBUG] {sending   [50 bytes]} 0xFF 0x00 0x00 0x00 0x2D 0xD4 0x8C 0x01 0x00 0x00 0x00 0x00 0x00 0x40 0x01 0xFE 0x0F 0xBB 0xBA 0xA6 0xC9 0x89 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0xFF 0xFF 0x01 0xFE 0x0F 0xBB 0xBA 0xA6 0xC9 0x89 0x00 0x00 0x06 0x46 0x66 0x6D 0x01 0x01 0x10 0x00 
 }}}
 
+
+http://ismb-npp-java.googlecode.com/files/50px-warning.png
+*Please note* that if you are using an ACR122U device and you get the error:
+
+*_"Device not supported, only ACS ACR122 is supported now" _*
+
+it's highly probable that it's not a blocking error. I've received a couple of notifications about such problem. Investigating and trying with different readers, I understand  that it depends on the ACR122U firmware version.
+
+In the version I have, the behaviour is "blocking".. so you can run the code and then put the phone on the reader. In other versions, instead, the behaviour is "not blocking" so if the phone is not on the reader you'll have such behaviour. 
+
+So if you see the above mentioned error, please try putting the phone on the reader before executing the java code.
+
+
 *2* - The second step is to put the phone on the reader
 http://ismb-npp-java.googlecode.com/files/Putting.jpg
 
