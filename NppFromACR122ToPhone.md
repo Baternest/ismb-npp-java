@@ -1,0 +1,104 @@
+# Introduction #
+
+Test Environment and Log obtained in testing NPP (NDEF PUSH PROTOCOL) communication from ACR122 to PHONE Samsung Nexus S
+
+
+# Details #
+
+Test Environment:
+
+![http://ismb-npp-java.googlecode.com/files/TestEnvironment.jpg](http://ismb-npp-java.googlecode.com/files/TestEnvironment.jpg)
+
+In the first test on the Android phone, it has been used the Google+ App to receive data sent from ACR122
+(for details http://www.google.com/mobile/+/ )
+
+So if you want to test the Java code, verify to have such application installed on your NFC capable phone.
+ASAP it will be uploaded a simple Android code in order to receive NDEF message without Google plus.
+
+**1** - The first step is to execute the Java code (**SenderToPhone.java** contained in the archive: http://ismb-npp-java.googlecode.com/files/NppFromReaderToPhone.zip) and then wait until in the console appears the following messages:
+
+```
+Get factory
+Get terminals
+Terminal name: ACS ACR122U 00 00
+T=0
+Called rightProcedureTarget..
+[DEBUG] {sending   [50 bytes]} 0xFF 0x00 0x00 0x00 0x2D 0xD4 0x8C 0x01 0x00 0x00 0x00 0x00 0x00 0x40 0x01 0xFE 0x0F 0xBB 0xBA 0xA6 0xC9 0x89 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0xFF 0xFF 0x01 0xFE 0x0F 0xBB 0xBA 0xA6 0xC9 0x89 0x00 0x00 0x06 0x46 0x66 0x6D 0x01 0x01 0x10 0x00 
+```
+
+
+![http://ismb-npp-java.googlecode.com/files/50px-warning.png](http://ismb-npp-java.googlecode.com/files/50px-warning.png)
+**Please note** that if you are using an ACR122U device and you get the error:
+
+**_"Device not supported, only ACS ACR122 is supported now"_**
+
+it's highly probable that it's not a blocking error. I've received a couple of notifications about such problem. Investigating and trying with different readers, I understand  that it depends on the ACR122U firmware version.
+
+In the version I have, the behaviour is "blocking".. so you can run the code and then put the phone on the reader. In other versions, instead, the behaviour is "not blocking" so if the phone is not on the reader you'll have such behaviour.
+
+So if you see the above mentioned error, please try putting the phone on the reader before executing the java code.
+
+
+**2** - The second step is to put the phone on the reader
+![http://ismb-npp-java.googlecode.com/files/Putting.jpg](http://ismb-npp-java.googlecode.com/files/Putting.jpg)
+
+**3** - At this point the J2SE application will go on and on the Android phone will appear the following window
+```
+Get factory
+Get terminals
+Terminal name: ACS ACR122U 00 00
+T=0
+Called rightProcedureTarget..
+[DEBUG] {sending   [50 bytes]} 0xFF 0x00 0x00 0x00 0x2D 0xD4 0x8C 0x01 0x00 0x00 0x00 0x00 0x00 0x40 0x01 0xFE 0x0F 0xBB 0xBA 0xA6 0xC9 0x89 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0xFF 0xFF 0x01 0xFE 0x0F 0xBB 0xBA 0xA6 0xC9 0x89 0x00 0x00 0x06 0x46 0x66 0x6D 0x01 0x01 0x10 0x00 
+[DEBUG] {receiving [35 bytes]} 0xD5 0x8D 0x26 0x1E 0xD4 0x00 0x01 0xFE 0x0F 0xBB 0xBA 0xA6 0xC9 0x89 0x00 0x00 0x00 0x00 0x00 0x32 0x46 0x66 0x6D 0x01 0x01 0x10 0x03 0x02 0x00 0x01 0x04 0x01 0x96 0x90 0x00 
+[DEBUG] {sending   [7 bytes]} 0xFF 0x00 0x00 0x00 0x02 0xD4 0x86 
+[DEBUG] {receiving [7 bytes]} 0xD5 0x87 0x00 0x00 0x00 0x90 0x00 
+[DEBUG] {sending   [26 bytes]} 0xFF 0x00 0x00 0x00 0x15 0xD4 0x8E 0x05 0x20 0x06 0x0F 0x63 0x6F 0x6D 0x2E 0x61 0x6E 0x64 0x72 0x6F 0x69 0x64 0x2E 0x6E 0x70 0x70 
+[DEBUG] {receiving [5 bytes]} 0xD5 0x8F 0x00 0x90 0x00 
+[DEBUG] {sending   [7 bytes]} 0xFF 0x00 0x00 0x00 0x02 0xD4 0x86 
+[DEBUG] {receiving [11 bytes]} 0xD5 0x87 0x00 0x81 0x90 0x02 0x02 0x00 0x78 0x90 0x00 
+[DEBUG] {sending   [77 bytes]} 0xFF 0x00 0x00 0x00 0x48 0xD4 0x8E 0x43 0x20 0x00 0x01 0x00 0x00 0x00 0x01 0x01 0x00 0x00 0x00 0x39 0xD1 0x01 0x35 0x54 0x02 0x65 0x6E 0x4E 0x50 0x50 0x20 0x74 0x65 0x73 0x74 0x20 0x63 0x6F 0x6D 0x6D 0x75 0x6E 0x69 0x63 0x61 0x74 0x69 0x6F 0x6E 0x20 0x62 0x65 0x74 0x77 0x65 0x65 0x6E 0x20 0x4E 0x45 0x58 0x55 0x53 0x2D 0x53 0x20 0x61 0x6E 0x64 0x20 0x41 0x43 0x52 0x2D 0x31 0x32 0x32 
+[DEBUG] {receiving [5 bytes]} 0xD5 0x8F 0x00 0x90 0x00 
+Finished
+```
+
+![http://ismb-npp-java.googlecode.com/files/GooglePlusAuth.jpg](http://ismb-npp-java.googlecode.com/files/GooglePlusAuth.jpg)
+
+**4** - On the Android phone, choose Google+ and the following  window it will appear
+![http://ismb-npp-java.googlecode.com/files/NDEFMsgReceived.jpg](http://ismb-npp-java.googlecode.com/files/NDEFMsgReceived.jpg)
+
+> ![http://ismb-npp-java.googlecode.com/files/50px-Done.png](http://ismb-npp-java.googlecode.com/files/50px-Done.png) **THAT'S ALL**
+Here you have received the NDEF message containing  _NPP test communication between NEXUS-S and ACR122_
+
+**5** - This is the log on the Android LogCat Console:
+```
+09-07 01:14:09.617: DEBUG/NFC JNI(6193): Discovered P2P Target
+09-07 01:14:09.617: DEBUG/NfcService(6193): LLCP Activation message
+09-07 01:14:09.683: INFO/NFC JNI(6193): LLCP Link activated (LTO=10, MIU=128, OPTION=0x00, WKS=0x01)
+09-07 01:14:09.683: DEBUG/NdefPushClient(6193): LLCP connection up and running
+09-07 01:14:09.683: DEBUG/NdefPushClient(6193): no tags set, bailing
+09-07 01:14:10.542: DEBUG/NdefPushServer(6193): accept returned com.android.internal.nfc.LlcpSocket@40594338
+09-07 01:14:10.550: DEBUG/NdefPushServer(6193): about to accept
+09-07 01:14:10.558: DEBUG/NdefPushServer(6193): starting connection thread
+09-07 01:14:10.562: DEBUG/NdefPushServer(6193): read 67 bytes
+09-07 01:14:10.640: INFO/NFC JNI(6193): LLCP Link deactivated
+09-07 01:14:10.644: DEBUG/NdefPushServer(6193): connection broken by IOException
+09-07 01:14:10.644: DEBUG/NdefPushServer(6193): java.io.IOException
+09-07 01:14:10.644: DEBUG/NdefPushServer(6193):     at com.android.internal.nfc.LlcpSocket.receive(LlcpSocket.java:193)
+09-07 01:14:10.644: DEBUG/NdefPushServer(6193):     at com.android.nfc.ndefpush.NdefPushServer$ConnectionThread.run(NdefPushServer.java:70)
+09-07 01:14:10.644: DEBUG/NdefPushServer(6193): got message com.android.nfc.ndefpush.NdefPushProtocol@405962f0
+09-07 01:14:10.644: DEBUG/NdefPushServer(6193): about to close
+09-07 01:14:10.644: DEBUG/NfcService(6193): LLCP Link Deactivated message. Restart polling loop.
+09-07 01:14:10.660: DEBUG/NfcService(6193): mock NDEF tag, starting corresponding activity
+09-07 01:14:10.660: DEBUG/NfcService(6193): TAG uid = [B@40596a50 Tech [
+09-07 01:14:10.664: DEBUG/NdefPushServer(6193): finished connection thread
+09-07 01:14:10.667: INFO/ActivityManager(116): Starting: Intent { act=android.nfc.action.NDEF_DISCOVERED typ=text/plain flg=0x10000000 cmp=android/com.android.internal.app.ResolverActivity (has extras) } from pid 6193
+09-07 01:14:10.972: INFO/ActivityManager(116): Displayed android/com.android.internal.app.ResolverActivity: +287ms
+09-07 01:14:15.195: INFO/ActivityManager(116): Starting: Intent { act=android.nfc.action.NDEF_DISCOVERED typ=text/plain flg=0x13800000 cmp=com.google.android.apps.plus/com.google.android.apps.plusone.app.NfcTagUpdateActivity (has extras) } from pid 116
+09-07 01:14:15.257: VERBOSE/RenderScript_jni(203): surfaceDestroyed
+09-07 01:14:15.374: INFO/SpeedBump(491): Read Prefs: 0
+09-07 01:14:15.605: INFO/ActivityManager(116): Displayed com.google.android.apps.plus/com.google.android.apps.plusone.app.NfcTagUpdateActivity: +351ms
+```
+
+
+**Please consider this first release of the application as a Proof of Concept and not as a fully defined and bug free application.  Obviously, it's not yet STABLE.**

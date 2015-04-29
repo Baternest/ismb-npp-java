@@ -1,0 +1,80 @@
+# Introduction #
+
+Test Environment and Log obtained in testing NPP (NDEF PUSH PROTOCOL) communication from a PHONE Samsung Nexus S and an ACR122 reader
+
+
+# Details #
+
+
+Test Environment:
+
+![http://ismb-npp-java.googlecode.com/files/TestEnv2.jpg](http://ismb-npp-java.googlecode.com/files/TestEnv2.jpg)
+
+In the first test on the Android phone, it has been used the **SimpleNDEFPusher** App (source code  - http://ismb-npp-java.googlecode.com/files/AndroidSimpleNDEFPusherSource.zip and installer http://ismb-npp-java.googlecode.com/files/AndroidSimpleNDEFPusherAPK.zip available in Downloads section) to send data to an ACR122 reader.
+
+So if you want to test the Java code, you need to install such application on your NFC capable phone and execute it. If you don't want to build your own application also the installer is available in Downloads section.
+
+
+**1** - The first step is to execute the Java code ( **PhoneToReceiver** contained in the archive: http://ismb-npp-java.googlecode.com/files/NPPFromPhoneToReader.zip) and then wait until in the console appears the following messages:
+
+```
+Get factory
+Get terminals
+Terminal name: ACS ACR122U 00 00
+T=0
+Called rightProcedureReceiver..
+[DEBUG] {sending   [50 bytes]} 0xFF 0x00 0x00 0x00 0x2D 0xD4 0x8C 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x01 0xFE 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x01 0xFE 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x06 0x46 0x66 0x6D 0x01 0x01 0x10 0x00 
+```
+
+![http://ismb-npp-java.googlecode.com/files/50px-warning.png](http://ismb-npp-java.googlecode.com/files/50px-warning.png)
+**Please note** that if you are using an ACR122U device and you get the error:
+
+**_"Device not supported, only ACS ACR122 is supported now"_**
+
+it's highly probable that it's not a blocking error. I've received a couple of notifications about such problem. Investigating and trying with different readers, I understand  that it depends on the ACR122U firmware version.
+
+In the version I have, the behaviour is "blocking".. so you can run the code and then put the phone on the reader. In other versions, instead, the behaviour is "not blocking" so if the phone is not on the reader you'll have such behaviour.
+
+So if you see the above mentioned error, please try putting the phone on the reader before executing the java code.
+
+
+
+**2** - The second step is to put the phone on the reader
+![http://ismb-npp-java.googlecode.com/files/Putting2.jpg](http://ismb-npp-java.googlecode.com/files/Putting2.jpg)
+
+**3** - At this point the J2SE application will go on and on the Android phone will appear the following window
+```
+Get factory
+Get terminals
+Terminal name: ACS ACR122U 00 00
+T=0
+Called rightProcedureReceiver..
+[DEBUG] {sending   [50 bytes]} 0xFF 0x00 0x00 0x00 0x2D 0xD4 0x8C 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x01 0xFE 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x01 0xFE 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x06 0x46 0x66 0x6D 0x01 0x01 0x10 0x00 
+[DEBUG] {receiving [35 bytes]} 0xD5 0x8D 0x26 0x1E 0xD4 0x00 0x01 0xFE 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x32 0x46 0x66 0x6D 0x01 0x01 0x10 0x03 0x02 0x00 0x01 0x04 0x01 0x96 0x90 0x00 
+[DEBUG] {sending   [7 bytes]} 0xFF 0x00 0x00 0x00 0x02 0xD4 0x86 
+[DEBUG] {receiving [24 bytes]} 0xD5 0x87 0x00 0x05 0x21 0x06 0x0F 0x63 0x6F 0x6D 0x2E 0x61 0x6E 0x64 0x72 0x6F 0x69 0x64 0x2E 0x6E 0x70 0x70 0x90 0x00 
+[DEBUG] {sending   [9 bytes]} 0xFF 0x00 0x00 0x00 0x04 0xD4 0x8E 0x85 0x81 
+[DEBUG] {receiving [5 bytes]} 0xD5 0x8F 0x00 0x90 0x00 
+[DEBUG] {sending   [7 bytes]} 0xFF 0x00 0x00 0x00 0x02 0xD4 0x8A 
+[DEBUG] {receiving [6 bytes]} 0xD5 0x8B 0x01 0x22 0x90 0x00 
+[DEBUG] {sending   [7 bytes]} 0xFF 0x00 0x00 0x00 0x02 0xD4 0x86 
+[DEBUG] {receiving [57 bytes]} 0xD5 0x87 0x00 0x07 0x21 0x00 0x01 0x00 0x00 0x00 0x01 0x01 0x00 0x00 0x00 0x27 0xD1 0x01 0x23 0x54 0x02 0x65 0x6E 0x4E 0x44 0x45 0x46 0x20 0x50 0x75 0x73 0x68 0x20 0x64 0x61 0x74 0x61 0x20 0x73 0x65 0x6E 0x74 0x20 0x66 0x72 0x6F 0x6D 0x20 0x4E 0x65 0x78 0x75 0x73 0x2D 0x53 0x90 0x00 
+Finished
+```
+
+
+![http://ismb-npp-java.googlecode.com/files/50px-Done.png](http://ismb-npp-java.googlecode.com/files/50px-Done.png) **THAT'S ALL**
+Here you have received on your Java Application the NDEF message containing  _NDEF Push data sent from Nexus-S_
+
+**4** - This is the log on the Android LogCat Console:
+```
+[2011-09-07 10:49:07 - SimpleNDEFPusher] Android Launch!
+[2011-09-07 10:49:07 - SimpleNDEFPusher] adb is running normally.
+[2011-09-07 10:49:07 - SimpleNDEFPusher] Performing it.ismb.android.npp.SimpleNDEFPusher activity launch
+[2011-09-07 10:49:07 - SimpleNDEFPusher] Automatic Target Mode: using device '3232AA96F58300EC'
+[2011-09-07 10:49:07 - SimpleNDEFPusher] Application already deployed. No need to reinstall.
+[2011-09-07 10:49:07 - SimpleNDEFPusher] Starting activity it.ismb.android.npp.SimpleNDEFPusher on device 3232AA96F58300EC
+[2011-09-07 10:49:07 - SimpleNDEFPusher] ActivityManager: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=it.ismb.android.npp/.SimpleNDEFPusher }
+```
+
+**Please consider this first release of the application as a Proof of Concept and not as a fully defined and bug free application.  Obviously, it's not yet STABLE.**
